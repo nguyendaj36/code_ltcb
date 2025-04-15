@@ -1,0 +1,56 @@
+
+<html>
+<head>
+  <title>Đăng nhập - CNPM Computer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="container">
+    <img src="image/logo.png" alt="DKM logo" class="logo" />
+
+    <!-- Form Đăng nhập -->
+    <div class="form-box" id="login-form">
+      <h2>Đăng nhập</h2>
+      <input type="text" id="login-email" placeholder="Số điện thoại hoặc Gmail" />
+      <input type="password" id="login-password" placeholder="Mật khẩu" />
+      
+      <label class="remember">
+        <input type="checkbox" />Lưu mật khẩu
+      </label>
+      
+      <button onclick="login()">Đăng nhập</button>
+
+      <div class="social-login">
+        <p>Hoặc tiếp tục bằng:</p>
+        <button class="facebook-btn">Facebook</button>
+        <button class="google-btn">Google</button>
+      </div>
+
+      <p class="switch">Chưa có tài khoản? <span onclick="toggleForm()">Đăng ký</span></p>
+    </div>
+
+    <!-- Form Đăng ký -->
+    <div class="form-box hidden" id="register-form">
+      <h2>Đăng ký</h2>
+      <input type="text" id="register-email" placeholder="Số điện thoại hoặc Gmail" />
+      <input type="text" id="register-username" placeholder="Tên người dùng" />
+      <input type="password" id="register-password" placeholder="Mật khẩu" />
+      <input type="password" id="register-confirm" placeholder="Xác nhận lại mật khẩu" />
+      
+      <button onclick="register()">Đăng ký</button>
+
+      <div class="social-login">
+        <p>Hoặc tiếp tục bằng:</p>
+        <button class="facebook-btn">Facebook</button>
+        <button class="google-btn">Google</button>
+      </div>
+
+      <p class="switch">Đã có tài khoản? <span onclick="toggleForm()">Đăng nhập</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
