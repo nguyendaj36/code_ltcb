@@ -7,45 +7,53 @@
     <header>
         <nav>
             <img src="Img/Logo.png">
-            <div class="nav-links">
+            <div class="menu">
                 <a href="#">Trang chủ</a>
                 <a href="#">Sản phẩm</a>
                 <a href="#">Về chúng tôi</a>
                 <a href="#">Liên hệ</a>
             </div>
-            <div class="cart-icon" id="cartIcon">
-                Giỏ Hàng 🛒
+            <div class="menu-DT"> <h1>☰ Menu</h1> <!-- menu cho cac tb nho hon -->
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
             </div>
+            <button class="gio-hang" id="cartIcon">
+                Giỏ Hàng 🛒
+            </button>
         </nav>
     </header>
     
-    <main>
+    <div class="ND">
         <section class="banner">
             <div class="slideshow-container">
                 <div class="slide">
                     <img src="Img/Ưu-dai-mua-he.jpg" alt="Khuyến mãi mùa hè" class="banner-image">
-                    <div class="banner-text">
+                    <div class="slide-text">
                         <h2>Khuyến mãi mùa hè</h2>
                         <p>Giảm giá đến 50% cho tất cả sản phẩm</p>
-                        <button class="btn">Xem ngay</button>
+                        <button class="nut-slide">Xem ngay</button>
                     </div>
                 </div>
                 
                 <div class="slide">
                     <img src="Img/San-pham-moi.jfif" alt="Sản phẩm mới" class="banner-image">
-                    <div class="banner-text">
+                    <div class="slide-text">
                         <h2>Sản phẩm mới 2025</h2>
                         <p>Khám phá những công nghệ mới nhất</p>
-                        <button class="btn">Khám phá</button>
+                        <button class="nut-slide">Khám phá</button>
                     </div>
                 </div>
                 
                 <div class="slide">
                     <img src="Img/Tri-an-khach-hang.png" alt="Ưu đãi thành viên" class="banner-image">
-                    <div class="banner-text">
+                    <div class="slide-text">
                         <h2>Ưu đãi thành viên</h2>
                         <p>Đăng ký thành viên để nhận thêm ưu đãi</p>
-                        <button class="btn">Đăng ký</button>
+                        <button class="nut-slide">Đăng ký</button>
                     </div>
                 </div>
                 
@@ -62,27 +70,27 @@
             </div>
         </section>
         
-        <section class="category-filter" id="categoryFilter">
-            <button class="category-btn active" data-category="all">Tất cả</button>
-            <button class="category-btn" data-category="PC Build Sẵn">PC Build Sẵn</button>
-            <button class="category-btn" data-category="Laptop">Laptop</button>
-            <button class="category-btn" data-category="phụ kiện">Phụ kiện</button>
-            <button class="category-btn" data-category="Màn Hình">Màn Hình</button>
+        <section class="nut-loc" id="categoryFilter">
+            <button class="loc active" data-category="all">Tất cả</button>
+            <button class="loc" data-category="PC Build Sẵn">PC Build Sẵn</button>
+            <button class="loc" data-category="Laptop">Laptop</button>
+            <button class="loc" data-category="phụ kiện">Phụ kiện</button>
+            <button class="loc" data-category="Màn Hình">Màn Hình</button>
         </section>
         
-        <section class="products-grid" id="area_sp">
+        <section class="area_sp" id="area_sp">
             <!-- san pham trung bay hien o day -->
         </section>
-    </main>
+    </div>
 
     <!-- Gio hang -->
-    <div class="modal" id="cartModal">
+    <div class="modal" id="giohang">
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Giỏ hàng</h2>
                 <button class="close-modal" id="closeCart">&times;</button>
             </div>
-            <div class="cart-items" id="cartItems">
+            <div class="cart-items" id="sp_gio">
                 <!-- San pham them vao gio hang hien o day -->
             </div>
             <div class="cart-total" id="cartTotal">Tổng: 0₫</div>
@@ -96,8 +104,7 @@
     </div>
     
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
+            <div class="card-foot">
                 <h3>Về ShopOnline</h3>
                 <ul>
                     <li><a href="#">Giới thiệu</a></li>
@@ -106,7 +113,7 @@
                     <li><a href="#">Chính sách bảo mật</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="card-foot">
                 <h3>Hỗ trợ khách hàng</h3>
                 <ul>
                     <li><a href="#">Trung tâm trợ giúp</a></li>
@@ -115,7 +122,7 @@
                     <li><a href="#">Chính sách đổi trả</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="card-foot">
                 <h3>Thanh toán</h3>
                 <ul>
                     <li><a href="#">Thẻ tín dụng</a></li>
@@ -124,7 +131,7 @@
                     <li><a href="#">Ví điện tử</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="card-foot">
                 <h3>Kết nối với chúng tôi</h3>
                 <ul>
                     <li><a href="#">Facebook</a></li>
@@ -133,10 +140,6 @@
                     <li><a href="#">YouTube</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 ShopOnline. Tất cả các quyền được bảo lưu.</p>
-        </div>
     </footer>
     
     <script>
@@ -200,44 +203,41 @@
             area_sp.innerHTML = '';
             
             for (let i = 0; i < sp_in.length; i++) {
-                var product = sp_in[i];
-                var sp = document.createElement('div');
-                sp.className = 'product-card';
+                var sp = sp_in[i];
+                var the_sp = document.createElement('div');
+                the_sp.className = 'sp-card';
 
-                sp.innerHTML = `
-                    <img src="${product.image}" alt="${product.ten}" class="product-image">
-                    <div class="product-info">
-                        <div class="product-title">${product.ten}</div>
-                        <div class="product-price">${re_VND(product.gia)}</div>
-                        <div class="product-description">${product.mota}</div>
-                        <button class="add-to-cart" data-id="${product.id}">Thêm vào giỏ</button>
+                the_sp.innerHTML = `
+                    <img src="${sp.image}" alt="${sp.ten}" class="sp-image">
+                    <div class="sp-info">
+                        <div class="sp-ten">${sp.ten}</div>
+                        <div class="sp-gia">${re_VND(sp.gia)}</div>
+                        <div class="sp-mota">${sp.mota}</div>
+                        <button class="nut-them" data-id="${sp.id}">Thêm vào giỏ</button>
                     </div>`;
         
-                area_sp.appendChild(sp);
+                area_sp.appendChild(the_sp); 
             }
             
                     // click nut them vao gio hang
-            var nut_them = document.querySelectorAll('.add-to-cart');
+            var nut_them = document.querySelectorAll('.nut-them');
             for (let i = 0; i < nut_them.length; i++) {
                 nut_them[i].addEventListener('click', them);
             }
         }
-        
         // Loc
         function loc_sp() {
-            var categoryButtons = document.querySelectorAll('.category-btn');
-            // gan su kien click cho cac nut loc
-            for (let i = 0; i < categoryButtons.length; i++) {
-                categoryButtons[i].addEventListener('click', function() {
-                // xoa class active cua cac nut
-                for (let j = 0; j < categoryButtons.length; j++) {
-                    categoryButtons[j].classList.remove('active');
+            var loc = document.querySelectorAll('.loc');
+
+            for (let i = 0; i < loc.length; i++) {
+                loc[i].addEventListener('click', function() {
+                for (let j = 0; j < loc.length; j++) {
+                    loc[j].classList.remove('active');
                 }
+
+                loc[i].classList.add('active');
             
-                // Them class actve cho nut vua click
-                categoryButtons[i].classList.add('active');
-            
-                var loai = categoryButtons[i].getAttribute('data-category');
+                var loai = loc[i].getAttribute('data-category');
             
                 // loc theo loai
                 if (loai === 'all') {
@@ -294,13 +294,13 @@
         
         // hien thi gio
         function hien_thi_gio() {
-            var cartItems = document.getElementById('cartItems');
+            var sp_gio = document.getElementById('sp_gio');
             var cartTotal = document.getElementById('cartTotal');
             
-            cartItems.innerHTML = '';
+            sp_gio.innerHTML = '';
             
             if (cart.length === 0) {
-                cartItems.innerHTML = '<p>Giỏ hàng của bạn đang trống.</p>';
+                sp_gio.innerHTML = '<p>Giỏ hàng của bạn đang trống.</p>';
                 cartTotal.textContent = 'Tổng: 0₫';
                 return;
             }
@@ -328,7 +328,7 @@
                     <button class="remove-item" data-index="${index}">×</button>
                 `;
                 
-                cartItems.appendChild(cartItem);
+                sp_gio.appendChild(cartItem);
             });
             
             cartTotal.textContent = `Tổng: ${re_VND(total)}`;
@@ -378,12 +378,12 @@
         
         // tat bat gio hang
         function tat_bat_gio() {
-            var cartModal = document.getElementById('cartModal');
-            if (cartModal.style.display === 'flex') {
-                cartModal.style.display = 'none';
+            var giohang = document.getElementById('giohang');
+            if (giohang.style.display === 'flex') {
+                giohang.style.display = 'none';
             } else {
                 hien_thi_gio();
-                cartModal.style.display = 'flex';
+                giohang.style.display = 'flex';
             }
         }
         
