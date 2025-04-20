@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+header {
+    background-color: rgb(16, 186, 192);
+    color: white;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+nav {
+    display: flex;
+
+}
+
+nav img {
+    height: 30px;
+    width: auto;
+    border-radius: 50%;    
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    margin-left: 60px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 20px;
+    margin: auto auto;
+}
+
+.menu a:hover {
+    color: #ffd700;
+}
+
+.mo-gio {
+    margin: 0 auto 0 auto;
+    position: absolute; 
+    right: 20px; 
+    background-color: rgb(16, 186, 192);
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* menu cho cac tb nho hon */
+.menu-DT {
+    display: none;
+}
+
+.menu-DT ul {
+    position: absolute;
+    display: none;
+    list-style: none;
+    background-color: rgb(16, 186, 192);
+}
+
+.menu-DT li {
+    padding: 10px;
+}
+
+.menu-DT li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 20;
+}
+
+.menu-DT li a:hover {
+    color: #ffd700;
+}
+
+.menu-DT:hover ul {
+    display: block;
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+    .menu a {
+        display: none;
+    }
+    .menu-DT {
+        display: block;
+    }
+}
+@media (max-width: 750px) {
+    .menu a {
+        display: none;
+    }
+    .menu-DT {
+        display: block;
+    }
+}
+
+/* noi dung chinh */
+.ND {
+    width: 60%;
+    margin: 30px auto;
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+    .ND {
+        width: 70%;
+    }
+}
+@media (max-width: 750px) {
+    .ND {
+        width: 90%;
+    }
+}
+
+/* dinh dang slide */
+.banner {
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    max-width: 50%;
+}
+
+.slide-text h2 {
+    font-size: 30px;
+    margin-bottom: 7px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-text p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nut-slide {
+    background-color: #ffd700;
+    color: #333;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.nut-slide:hover {
+    background-color: #e6c200;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    border-radius: 0 5px 5px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active, .dot:hover {
+    background-color: black;
+}
+
+/* dinh dang phan loc sp */
+
+.nut-loc {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.loc {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 7px 15px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.loc.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+.loc:hover {
+    background-color: #eee;
+}
+
+.loc.active:hover {
+    background-color: #444;
+}
+
+/*hien san pham */
+
+.area_sp {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+}
+
+.sp-card {
+    background-color: white;
+    width: 20%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.sp-card:hover {
+    transform: translateY(-5px) translateX(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.sp-card a{
+    text-decoration: none;
+}
+
+.sp-image {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sp-info {
+    position: relative;
+    padding: 15px;
+    height: 200px;
+    width: 100%;
+}
+
+.sp-ten {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sp-gia {
+    font-size: 15px;
+    color: #e63946;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.sp-mota {
+    color: #666;
+    font-size: 13px;
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+    .sp-card {
+        width: 33.3%;
+    }
+}
+@media (max-width: 750px) {
+    .sp-card {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .area_sp {
+        display: block;
+    }
+}
+
+.nut-them {
+    background-color: #333;
+    color: white;
+    border: none;
+    position: absolute;
+    padding: 10px;
+    border-radius: 4px;
+    bottom: 20px;
+    transition: 0.3s;
+}
+
+.nut-them:hover {
+    background-color: #555;
+}
+
+/*ket thuc noi dung chinh */
+
+/* dinh dang phan footter */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    gap: 30px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.card-foot {
+    margin: 0 auto;
+}
+
+.card-foot h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: rgb(16, 186, 192);
+}
+
+.card-foot ul {
+    list-style: none;
+}
+
+.card-foot li {
+    margin-bottom: 7px;
+}
+
+.card-foot a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-foot a:hover {
+    color: rgb(16, 186, 192);
+}
+
+/* dinh dang gio hang */
+
+.gio-hang {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.nd-gio {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.gio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nut-dong {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.sp-gio {
+    margin-bottom: 1.5rem;
+}
+
+.the-sp {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.the-sp-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.the-sp-details {
+    flex: 1;
+}
+
+.the-sp-ten {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.the-sp-gia {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.the-sp-soluong {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.nut-sl {
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.soluong-input {
+    width: 30px;
+    text-align: center;
+    margin: 0 7px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.30px;
+}
+
+.xoa {
+    background: none;
+    border: none;
+    color: #999;
+    margin-left: auto;
+}
+
+.xoa:hover {
+    color: #e63946;
+}
+
+.tong {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: right;
+}
+
+.ThanhToan {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.ThanhToan:hover {
+    background-color: #3d8b40;
+}
+
+/* dinh dang thong bao */
+
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease;
+    z-index: 100;
+}
+
+.notification.show {
+    display: block;
+}
