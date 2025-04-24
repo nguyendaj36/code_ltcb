@@ -1,0 +1,509 @@
+<html lang="vi">
+  <head>
+    <title>trang chu</title>
+    <link rel="stylesheet" href="trangchu.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="trangchu.html">
+          <img src="img/logo.jpg" />
+        </a>
+
+        <div class="nav-links">
+          <a href="trangchu.html">Trang chủ</a>
+          <div class="dropdown">
+            <a href="gianhang.html" class="dropdown-btn">Sản phẩm</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="#">PC</a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="#gianhang.html">PC 10tr</a></li>
+                  <li><a href="#">PC 15tr</a></li>
+                  <li><a href="#">PC 20tr</a></li>
+                </ul>
+              </li>
+              <ul class="dropdown-content">
+                <li>
+                  <a href="#">Laptop</a>
+                  <ul class="sub-dropdown-content">
+                    <li><a href="#">Dell</a></li>
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">HP</a></li>
+                    <li><a href="#">Lenovo</a></li>
+                    <li><a href="#">Asus</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <li>
+                <a href="#">Phụ kiện</a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="#">Màn hình</a></li>
+                  <li><a href="#">Tai nghe</a></li>
+                  <li><a href="#">Bàn phím</a></li>
+                  <li><a href="#">Chuột</a></li>
+                  <li><a href="#">Loa</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropdown-btn">tin tức</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="#">hôm nay</a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="#">trong nước </a></li>
+                  <li><a href="#">ngoài nước </a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">hot</a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="#sp-hot">sản phẩm nổi bật </a></li>
+                  <li><a href="#sp-moi">sản phẩm mới </a></li>
+                </ul>
+              </li>
+              <li><a href="#">siêu deal </a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropdown-btn">Về chúng tôi</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropdown-btn">Liên hệ</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Số điện thoại</a></li>
+              <li><a href="#">Email</a></li>
+            </ul>
+          </div>
+          <a href="signin.html">đăng nhập</a>
+        </div>
+        <div class="cart-icon" id="cartIcon">Giỏ Hàng 🛒</div>
+      </nav>
+    </header>
+
+    <section class="hot-product fancy-style">
+      <h2 class="hot-product-title" id="sp-hot">
+        🔥 các siêu phẩm trong tầm giá
+      </h2>
+      <div class="hot-product-container">
+        <div class="hot-product-card">
+          <img src="img/sp1.jpg" alt="San pham 1" class="hot-product-image" />
+          <h3 class="hot-product-name">Sản phẩm 1</h3>
+          <p class="hot-product-description">
+            Intel i3-12100F/ VGA RX 6500XT (Powered by ASUS)
+          </p>
+          <br />
+          <p>
+            <span class="new-price">10.450.000đ</span>
+            <span class="old-price">12.500.000đ</span>
+          </p>
+          <button class="hot-product-button" id="viewProduct1">Xem thêm</button>
+        </div>
+        <div class="hot-product-card">
+          <img src="img/sp2.jpg" alt="sản phẩm 2" class="hot-product-image" />
+          <h3 class="hot-product-name">Sản phẩm 2</h3>
+          <p class="hot-product-description">
+            GVN Intel i5-12400F/ VGA RTX 4060 (Powered by NZXT)
+          </p>
+          <br />
+          <p>
+            <span class="new-price">21.000.000đ</span>
+            <span class="old-price">25.000.000đ</span>
+          </p>
+          <button class="hot-product-button" id="viewProduct2">Xem thêm</button>
+        </div>
+        <div class="hot-product-card">
+          <img src="img/sp3.jpg" alt="San pham 1" class="hot-product-image" />
+          <h3 class="hot-product-name">Sản phẩm 3</h3>
+          <p class="hot-product-description">
+            GVN Intel i7-14700F/ VGA RTX 3060 (Powered by ACER)
+          </p>
+          <br />
+          <p>
+            <span class="new-price">30.000.000đ</span>
+            <span class="old-price">38.000.000đ</span>
+          </p>
+          <button class="hot-product-button" id="viewProduct3">Xem thêm</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="productModal1">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal1">&times;</span>
+        <h3>Thông tin sản phẩm 1</h3>
+        <div class="modal-body">
+          <div class="image-slider">
+            <img
+              src="img/sp1.jpg"
+              alt="Sản phẩm 1 - Hình 1"
+              class="slider-image"
+            />
+            <img
+              src="img/sp1-1.jpg"
+              alt="Sản phẩm 1 - Hình 2"
+              class="slider-image"
+            />
+            <img
+              src="img/sp1-2.jpg"
+              alt="Sản phẩm 1 - Hình 3"
+              class="slider-image"
+            />
+            <img
+              src="img/sp1-3.jpg"
+              alt="Sản phẩm 1 - Hình 4"
+              class="slider-image"
+            />
+            <button class="prev-button">❮</button>
+            <button class="next-button">❯</button>
+          </div>
+          <p>Giá: 10.450.000đ</p>
+          <p>Màn hình: ViewSonic VA2215-H 22" 100Hz FHD</p>
+          <p>Bàn phím: DareU EK106 Pro Haze Blue Cloud switch</p>
+          <p>Chuột: Logitech G502 HERO</p>
+          <button class="add-to-cart-button" id="addToCart1">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="productModal2">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal2">&times;</span>
+        <h3>Thông tin sản phẩm 2</h3>
+        <div class="modal-body">
+          <div class="image-slider">
+            <img
+              src="img/sp2.jpg"
+              alt="Sản phẩm 2 - Hình 1"
+              class="slider-image"
+            />
+            <img
+              src="img/sp2-1.jpg"
+              alt="Sản phẩm 2 - Hình 2"
+              class="slider-image"
+            />
+            <img
+              src="img/sp2-2.jpg"
+              alt="Sản phẩm 2 - Hình 3"
+              class="slider-image"
+            />
+            <img
+              src="img/sp2-3.jpg"
+              alt="Sản phẩm 2 - Hình 4"
+              class="slider-image"
+            />
+            <button class="prev-button">❮</button>
+            <button class="next-button">❯</button>
+          </div>
+          <p>Giá: 21.000.000đ</p>
+          <p>Màn hình: ACER EK221Q E3 22" IPS 100Hz</p>
+          <p>Bàn phím: Machenike K600-B82W White Tri-Mode GR Silver switch</p>
+          <p>Chuột: Razer DeathAdder Essential (RZ01-03850100-R3M1)</p>
+          <button class="add-to-cart-button" id="addToCart2">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="productModal3">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal3">&times;</span>
+        <h3>Thông tin sản phẩm 3</h3>
+        <div class="modal-body">
+          <div class="image-slider">
+            <img
+              src="img/sp3.jpg"
+              alt="Sản phẩm 2 - Hình 1"
+              class="slider-image"
+            />
+            <img
+              src="img/sp3-3.jpg"
+              alt="Sản phẩm 2 - Hình 2"
+              class="slider-image"
+            />
+            <img
+              src="img/sp3-2.jpg"
+              alt="Sản phẩm 2 - Hình 3"
+              class="slider-image"
+            />
+            <img
+              src="img/sp3-1.jpg"
+              alt="Sản phẩm 2 - Hình 4"
+              class="slider-image"
+            />
+            <button class="prev-button">❮</button>
+            <button class="next-button">❯</button>
+          </div>
+          <p>Giá: 30.000.000đ</p>
+          <p>Màn hình: LG 27GS75Q-B 27" IPS 2K 200Hz Gsync</p>
+          <p>Bàn phím: E-Dra không dây EK375 Pro Beta Brown Switch</p>
+          <p>Chuột: Logitech G102 LightSync White</p>
+          <button class="add-to-cart-button" id="addToCart3">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="new-product-section">
+      <div class="new-product-container">
+        <h2 class="new-product-title" id="sp-moi">
+          Sản phẩm mới ra mắt trong tháng này
+        </h2>
+        <div class="new-product-list">
+          <div class="new-product-item">
+            <img
+              src="img/laptop1-1.jpg"
+              alt="San pham 1"
+              class="new-product-image"
+            />
+            <h3 class="new-product-name">Laptop Acer Swift 3</h3>
+            <p class="new-product-description">
+              laptop văn phòng mỏng nhẹ, hiệu năng cao, thiết kế sang trọng.
+            </p>
+            <button class="hot-product-button" id="viewProduct4">
+              Xem thêm
+            </button>
+          </div>
+          <div class="new-product-item">
+            <img
+              src="img/laptop2-1.jpg"
+              alt="San pham 2"
+              class="new-product-image"
+            />
+            <h3 class="new-product-name">Laptop gaming Gigabyte G5</h3>
+            <p class="new-product-description">
+              Laptop gaming với card đồ họa rời, hiệu năng mạnh mẽ.
+            </p>
+            <button class="hot-product-button" id="viewProduct5">
+              Xem thêm
+            </button>
+          </div>
+          <div class="new-product-item">
+            <img
+              src="img/laptop3-1.jpg"
+              alt="San pham 3"
+              class="new-product-image"
+            />
+            <h3 class="new-product-name">Laptop ASUS Zenbook 14</h3>
+            <p class="new-product-description">
+              laptop văn phòng cao cấp, mỏng nhẹ hiệu năng cao.
+            </p>
+            <button class="hot-product-button" id="viewProduct6">
+              Xem thêm
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="productModal4">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal4">&times;</span>
+        <h3>Laptop Acer Swift 3</h3>
+        <div class="modal-body">
+          <div class="image-slider">
+            <img
+              src="img/laptop1-1.jpg"
+              alt="Sản phẩm 1 - Hình 1"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop1-2.jpg"
+              alt="Sản phẩm 1 - Hình 2"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop1-3.jpg"
+              alt="Sản phẩm 1 - Hình 1"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop1-4.jpg"
+              alt="Sản phẩm 1 - Hình 2"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop1-5.jpg"
+              alt="Sản phẩm 1 - Hình 3"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop1-6.jpg"
+              alt="Sản phẩm 1 - Hình 4"
+              class="slider-image"
+            />
+            <button class="prev-button">❮</button>
+            <button class="next-button">❯</button>
+          </div>
+          <p>Giá: 12 triệu</p>
+          <p>CPU: Intel Core i5-1135G7</p>
+          <p>Ổ CỨNG: 512G</p>
+          <p>RAM: 16G</p>
+          <p>CARD đồ họa: Intel Iris Xe Graphics</p>
+          <button class="add-to-cart-button" id="addToCart4">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="productModal5">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal5">&times;</span>
+        <h3>Laptop gaming Gigabyte G5</h3>
+        <div class="modal-body">
+          <div class="image-slider">
+            <img
+              src="img/laptop2-1.jpg"
+              alt="Sản phẩm 1 - Hình 1"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop2-2.jpg"
+              alt="Sản phẩm 1 - Hình 2"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop2-3.jpg"
+              alt="Sản phẩm 1 - Hình 3"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop2-4.jpg"
+              alt="Sản phẩm 1 - Hình 3"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop2-5.jpg"
+              alt="Sản phẩm 1 - Hình 4"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop2-6.jpg"
+              alt="Sản phẩm 1 - Hình 5"
+              class="slider-image"
+            />
+            <button class="prev-button">❮</button>
+            <button class="next-button">❯</button>
+          </div>
+          <p>Giá: 21 triệu</p>
+          <p>CPU: Intel Core i7-13620H</p>
+          <p>Ổ CỨNG: 512G</p>
+          <p>RAM: 16G</p>
+          <p>CARD đồ họa: RTX™ 4050 Laptop GPU 6GB</p>
+          <button class="add-to-cart-button" id="addToCart5">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="productModal6">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal6">&times;</span>
+        <h3>Laptop ASUS Zenbook 14</h3>
+        <div class="modal-body">
+          <div class="image-slider">
+            <img
+              src="img/laptop3-1.jpg"
+              alt="Sản phẩm 1 - Hình 1"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop3-2.jpg"
+              alt="Sản phẩm 1 - Hình 2"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop3-3.jpg"
+              alt="Sản phẩm 1 - Hình 3"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop3-4.jpg"
+              alt="Sản phẩm 1 - Hình 3"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop3-5.jpg"
+              alt="Sản phẩm 1 - Hình 3"
+              class="slider-image"
+            />
+            <img
+              src="img/laptop3-6.jpg"
+              alt="Sản phẩm 1 - Hình 3"
+              class="slider-image"
+            />
+            <button class="prev-button">❮</button>
+            <button class="next-button">❯</button>
+          </div>
+          <p>Giá: 21 triệu</p>
+          <p>CPU: Intel® Core™ Ultra 7 Processor 155H</p>
+          <p>Ổ CỨNG: 1T</p>
+          <p>RAM: 32G</p>
+          <p>CARD đồ họa: Intel® Arc™ Graphics</p>
+          <button class="add-to-cart-button" id="addToCart6">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Về ShopCNPM</h3>
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Điều khoản</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Hỗ trợ khách hàng</h3>
+          <ul>
+            <li><a href="#">Trung tâm trợ giúp</a></li>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Phương thức vận chuyển</a></li>
+            <li><a href="#">Chính sách đổi trả</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Thanh toán</h3>
+          <ul>
+            <li><a href="#">Thẻ tín dụng</a></li>
+            <li><a href="#">Chuyển khoản</a></li>
+            <li><a href="#">Thanh toán khi nhận hàng</a></li>
+            <li><a href="#">Ví điện tử</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Kết nối với chúng tôi</h3>
+          <ul>
+            <li><a href="kkd.html">Facebook</a></li>
+            <li><a href="kkd.html">Instagram</a></li>
+            <li><a href="kkd.html">Twitter</a></li>
+            <li><a href="kkd.html">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ShopOnline. Tất cả các quyền được bảo lưu.</p>
+      </div>
+    </footer>
+
+    <script src="trangchu.js"></script>
+  </body>
+</html>
