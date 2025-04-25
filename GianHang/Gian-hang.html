@@ -1,0 +1,416 @@
+<html>
+<head>
+    <title>Danh mục sản phẩm</title>
+    <link rel="stylesheet" href="Gian-Hang-sty.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="Img/Logo.png">
+            <div class="menu">
+                <a href="#">Trang chủ</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="menu-DT"> <h1>☰ Menu</h1> <!-- menu cho cac tb nho hon -->
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <button class="mo-gio" id="mo-gio">
+                Giỏ Hàng 🛒
+            </button>
+        </nav>
+    </header>
+    
+    <div class="ND">
+        <section class="banner">
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="Img/Ưu-dai-mua-he.jpg" alt="Khuyến mãi mùa hè" class="banner-image">
+                    <div class="slide-text">
+                        <h2>Khuyến mãi mùa hè</h2>
+                        <p>Giảm giá đến 50% cho tất cả sản phẩm</p>
+                        <button class="nut-slide">Xem ngay</button>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <img src="Img/San-pham-moi.jfif" alt="Sản phẩm mới" class="banner-image">
+                    <div class="slide-text">
+                        <h2>Sản phẩm mới 2025</h2>
+                        <p>Khám phá những công nghệ mới nhất</p>
+                        <button class="nut-slide">Khám phá</button>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <img src="Img/Tri-an-khach-hang.png" alt="Ưu đãi thành viên" class="banner-image">
+                    <div class="slide-text">
+                        <h2>Ưu đãi thành viên</h2>
+                        <p>Đăng ký thành viên để nhận thêm ưu đãi</p>
+                        <button class="nut-slide">Đăng ký</button>
+                    </div>
+                </div>
+                
+                <!-- nut dieu huong -->
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+            
+            <!-- cham tron -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+        
+        <section class="nut-loc" id="loaiFilter">
+            <button class="loc active" data-loai="all">Tất cả</button>
+            <button class="loc" data-loai="PC">PC</button>
+            <button class="loc" data-loai="Laptop">Laptop</button>
+            <button class="loc" data-loai="Phụ Kiện">Phụ Kiện</button>
+            <button class="loc" data-loai="Màn Hình">Màn Hình</button>
+        </section>
+        
+        <section class="area_sp" id="area_sp">
+            <!-- san pham trung bay hien o day -->
+        </section>
+    </div>
+
+    <!-- Gio hang -->
+    <div class="gio-hang" id="giohang">
+        <div class="nd-gio">
+            <div class="gio-header">
+                <h2>Giỏ hàng</h2>
+                <button class="nut-dong" id="dong-gio">&times;</button>
+            </div>
+            <div class="sp-gio" id="sp_gio">
+                <!-- San pham them vao gio hang hien o day -->
+            </div>
+            <div class="tong" id="tong">Tổng: 0₫</div>
+            <button class="ThanhToan">Thanh toán</button>
+        </div>
+    </div>
+
+    <!-- Thong bao them vao gio hang -->
+    <div id="notification" class="notification">
+        Đã thêm "<span id="notificationProduct"></span>" vào giỏ hàng!
+    </div>
+    
+    <footer>
+            <div class="card-foot">
+                <h3>Về ShopOnline</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Điều khoản</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="card-foot">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="#">Trung tâm trợ giúp</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Phương thức vận chuyển</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                </ul>
+            </div>
+            <div class="card-foot">
+                <h3>Thanh toán</h3>
+                <ul>
+                    <li><a href="#">Thẻ tín dụng</a></li>
+                    <li><a href="#">Chuyển khoản</a></li>
+                    <li><a href="#">Thanh toán khi nhận hàng</a></li>
+                    <li><a href="#">Ví điện tử</a></li>
+                </ul>
+            </div>
+            <div class="card-foot">
+                <h3>Kết nối với chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+    </footer>
+    
+    <!-- hien thi chi tiet san pham -->
+    <div id="CT-sp" class="CT-sp">
+        <div class="CT-noidung">
+          <span onclick="dongChiTiet()">×</span>
+          <div id="CT-noidung-sp"></div>
+        </div>
+      </div>
+
+    <script src="data-sp.js"></script>
+    <script>
+    // js phan slide
+        let slideIndex = 1;
+        let slideTimer;
+
+        // hien thi slide
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+
+            // Quay lai dau khi het slide
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+
+            // an tat ca slide
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Xóa trạng thái active của tất cả các dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            // hien thi slide
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+
+            // chuyen slide tu dong
+            clearTimeout(slideTimer);
+            slideTimer = setTimeout(function() {
+                slideIndex++;
+                showSlides(slideIndex);
+            }, 2500);
+        }
+
+        // dieu khien chuyen slide
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        // chuyen slide tu dong
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        // HIEN THI SAN PHAM
+        function re_VND(price) { // chuan gia hoa gia tien thanh dang VND
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "₫";
+        }
+
+        let gio = [];  // Khoi tao gio hang
+        
+        // hien san pham
+        function hien_san_pham(sp_in) {
+            var area_sp = document.getElementById('area_sp');
+            area_sp.innerHTML = '';
+            
+            for (let i = 0; i < sp_in.length; i++) {
+                var sp = sp_in[i];
+                var the_sp = document.createElement('div');
+                the_sp.className = 'sp-card';
+
+                the_sp.innerHTML = `
+                    <a onclick="CT_sp(${i})">
+                        <img src="${sp.image}" alt="${sp.ten}" class="sp-image">
+                    </a>
+                    <div class="sp-info">
+                        <a onclick="CT_sp(${i})">
+                            <div class="sp-ten">${sp.ten}</div>
+                        </a>
+                        <div class="sp-gia">${re_VND(sp.gia)}</div>
+                        <div class="sp-mota">${sp.mota}</div>
+                        <button class="nut-them" data-id="${sp.id}">Thêm vào giỏ</button>
+                    </div>`;
+
+                var buttons = the_sp.querySelector('.nut-them');
+                buttons.addEventListener('click', them);
+
+                area_sp.appendChild(the_sp); 
+            }
+        }
+
+        // Them vao gio
+        function them(event) {
+            let i = parseInt(event.target.dataset.id);
+            var product = Data.find(p => p.id === i);
+            
+            // kiem tra hang dc them da co trong gio chua
+            var existingItem = gio.find(item => item.product.id === i);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                gio.push({
+                    product: product,
+                    quantity: 1
+                });
+            }
+            
+            // thong bao them vao gio hang
+            Thongbaothem(product.ten);
+            hien_thi_gio(); // Cập nhật giỏ hàng ngay lập tức nếu đang mở
+        }
+
+        // chi tiet san pham
+        function CT_sp(index) {
+            var sp = Data[index];
+
+            var content = `
+                <img src="${sp.image}" alt="${sp.ten}">
+                <h2>${sp.ten}</h2>
+                <p><strong>Giá:</strong> ${re_VND(sp.gia)}</p>
+                <p><strong>Mô tả chi tiết:</strong> ${sp.mota_chitiet}</p>
+                <button class="nut-them-o-ct" data-id="${sp.id}">Thêm vào giỏ</button>
+            `;
+
+            document.getElementById('CT-noidung-sp').innerHTML = content;
+            document.getElementById('CT-sp').style.display = 'flex';
+
+            var buttons = document.querySelector('.nut-them-o-ct');
+            if (buttons) {
+                buttons.addEventListener('click', them);
+            }
+        }
+        function dongChiTiet() {
+            document.getElementById('CT-sp').style.display = 'none';
+        }
+
+        // Loc
+        function loc_sp() {
+            var loc = document.querySelectorAll('.loc');
+
+            for (let i = 0; i < loc.length; i++) {
+                loc[i].addEventListener('click', function() {
+                    for (let j = 0; j < loc.length; j++) {
+                        loc[j].classList.remove('active');
+                    }
+
+                    loc[i].classList.add('active');
+                
+                    var loai = loc[i].getAttribute('data-loai');
+                
+                    // loc theo loai
+                    if (loai === 'all') {
+                        hien_san_pham(Data);
+                    } else {
+                        var filteredData = Data.filter(product => product.loai === loai);
+                        hien_san_pham(filteredData);
+                    }
+                });
+            }
+        }
+
+        // ham hien thi thong bao them vao gio hang
+        function Thongbaothem(productName) {
+            var notification = document.getElementById('notification');
+            var notificationProduct = document.getElementById('notificationProduct');
+            
+            notificationProduct.textContent = productName;
+            notification.classList.add('show');
+            
+            // an sau 3s
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+    // hien thi gio
+
+        function hien_thi_gio() {
+            var sp_gio = document.getElementById('sp_gio');
+            var gioTotal = document.getElementById('tong');
+            
+            sp_gio.innerHTML = '';
+            
+            if (gio.length === 0) {
+                sp_gio.innerHTML = '<p>Giỏ hàng của bạn đang trống.</p>';
+                gioTotal.textContent = 'Tổng: 0₫';
+                return;
+            }
+            
+            let total = 0;
+            
+            for (let i = 0; i < gio.length; i++) {
+                let item = gio[i];
+
+                var gioItem = document.createElement('div');
+                gioItem.className = 'the-sp';
+
+                var itemTotal = item.product.gia * item.quantity;
+                total += itemTotal;
+
+                gioItem.innerHTML = `
+                    <img src="${item.product.image}" alt="${item.product.ten}" class="the-sp-image">
+                    <div class="the-sp-details">
+                        <div class="the-sp-ten">${item.product.ten}</div>
+                        <div class="the-sp-gia">${re_VND(item.product.gia)}</div>
+                        <div class="the-sp-soluong">
+                            <button class="nut-sl giam" data-id="${i}">-</button>
+                            <input type="text" value="${item.quantity}" class="soluong-input" readonly>
+                            <button class="nut-sl tang" data-id="${i}">+</button>
+                        </div>
+                    </div>
+                    <button class="xoa" data-id="${i}">×</button>
+                `;
+
+                sp_gio.appendChild(gioItem);
+
+                var nutTang = gioItem.querySelector('.tang');
+                nutTang.addEventListener('click', tang_so_luong);
+
+                var nutGiam = gioItem.querySelector('.giam');
+                nutGiam.addEventListener('click', giam_so_luong);
+
+                var nutXoa = gioItem.querySelector('.xoa');
+                nutXoa.addEventListener('click', xoa); 
+            }
+            gioTotal.textContent = `Tổng: ${re_VND(total)}`;
+        }
+
+        function giam_so_luong(event) {
+            let i = parseInt(event.target.dataset.id);
+            if (gio[i].quantity > 1) {
+                gio[i].quantity -= 1;
+            } else {
+                gio.splice(i, 1);
+            }
+            hien_thi_gio();
+        }
+
+        function tang_so_luong(event) {
+            let i = parseInt(event.target.dataset.id);
+            gio[i].quantity += 1;
+            hien_thi_gio();
+        }
+
+        function xoa(event) {
+            let i = parseInt(event.target.dataset.id);
+            gio.splice(i, 1);
+            hien_thi_gio();
+        }
+
+        function tat_bat_gio() {
+            var giohang = document.getElementById('giohang');
+            if (giohang.style.display === 'flex') {
+                giohang.style.display = 'none';
+            } else {
+                giohang.style.display = 'flex';
+            }
+        }
+
+        // chay js khi tai trang web
+        document.addEventListener('DOMContentLoaded', function () {
+            hien_san_pham(Data);           // khoi tao sp
+            loc_sp();                      // khoi tao loc
+            showSlides(slideIndex);        // khoi tao slides
+            document.getElementById('mo-gio').addEventListener('click', tat_bat_gio); // khoi tao nut mo gio hang
+            document.getElementById('dong-gio').addEventListener('click', tat_bat_gio); // khoi tao nut dong gio hang
+        });
+    </script>
+</body>
+</html>
