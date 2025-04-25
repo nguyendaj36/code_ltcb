@@ -1,4 +1,3 @@
-
 /* CSS Variables */
 :root {
   --primary-color: rgb(19, 83, 85);
@@ -138,6 +137,7 @@ footer {
   padding: 20px 40px;
   font-size: 14px;
   line-height: 1.6;
+  margin-top: 30px;
 }
 
 .footer-content {
@@ -432,4 +432,187 @@ footer {
   color: gray;
   font-size: 0.9em;
   text-decoration: line-through;
+}
+
+/* Định dạng cho phần "Xem thêm các sản phẩm chất lượng cao" */
+.view-more-section {
+  text-align: center; /* Căn giữa nội dung */
+  margin: 50px auto; /* Tạo khoảng cách trên và dưới */
+  font-family: Arial, sans-serif;
+}
+
+.view-more-section p {
+  font-size: 24px; /* Tăng cỡ chữ */
+  color: #333; /* Màu chữ */
+  margin-bottom: 15px; /* Khoảng cách giữa các đoạn văn */
+}
+
+.view-more-button {
+  display: inline-block;
+  padding: 15px 30px; /* Tăng kích thước nút */
+  font-size: 18px; /* Tăng cỡ chữ của nút */
+  color: #fff;
+  background-color: #0026ff; /* Màu nền nút */
+  text-decoration: none;
+  border-radius: 8px; /* Bo góc nút */
+  transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+  background-color: #adb300; /* Màu nền khi hover */
+}
+
+/* Kích thước mặc định (màn hình lớn) đã được định nghĩa trong CSS hiện tại */
+
+/* Điều chỉnh cho màn hình nhỏ hơn 768px (máy tính bảng) */
+@media (max-width: 768px) {
+  nav img {
+    height: 40px; /* Giảm kích thước logo */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Chuyển các liên kết thành cột */
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px; /* Giảm kích thước chữ */
+    padding: 8px 10px;
+  }
+
+  .dropdown-content {
+    min-width: 120px; /* Giảm chiều rộng menu con */
+  }
+
+  .sub-dropdown-content {
+    min-width: 120px; /* Giảm chiều rộng menu con cấp 2 */
+  }
+
+  .hot-product-card {
+    width: 220px; /* Giảm chiều rộng thẻ sản phẩm */
+  }
+
+  .hot-product-title {
+    font-size: 1.5em; /* Giảm kích thước tiêu đề */
+  }
+}
+
+/* Điều chỉnh cho màn hình nhỏ hơn 480px (điện thoại) */
+@media (max-width: 480px) {
+  nav img {
+    height: 30px; /* Giảm kích thước logo hơn nữa */
+  }
+
+  .nav-links a {
+    font-size: 12px; /* Giảm kích thước chữ hơn nữa */
+    padding: 5px 8px;
+  }
+
+  .dropdown-content {
+    min-width: 100px; /* Giảm chiều rộng menu con */
+  }
+
+  .sub-dropdown-content {
+    min-width: 100px; /* Giảm chiều rộng menu con cấp 2 */
+  }
+
+  .hot-product-card {
+    width: 180px; /* Giảm chiều rộng thẻ sản phẩm hơn nữa */
+  }
+
+  .hot-product-title {
+    font-size: 1.2em; /* Giảm kích thước tiêu đề hơn nữa */
+  }
+
+  .view-more-button {
+    font-size: 14px; /* Giảm kích thước chữ của nút */
+    padding: 10px 20px; /* Giảm kích thước nút */
+  }
+}
+
+/*tin tuc*/
+.news-section {
+  padding: 40px 20px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.news-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.news-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.news-item:hover {
+  transform: translateY(-4px);
+}
+
+.news-image {
+  width: 100%;
+  height: 140px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.news-heading {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 12px 4px;
+  color: #111;
+}
+
+.news-description {
+  font-size: 14px;
+  color: #444;
+  padding: 0 12px 12px;
+  line-height: 1.4;
+}
+
+.news-read-more {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a73e8;
+  text-decoration: none;
+  padding: 0 12px 12px;
+  cursor: pointer;
+}
+
+.news-read-more:hover {
+  text-decoration: underline;
+}
+
+/* Cho phần hiển thị mở rộng bằng <details> */
+.news-popup {
+  padding: 0 12px 12px;
+}
+
+.popup-image {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.popup-text {
+  font-size: 14px;
+  color: #333;
+  margin-top: 6px;
 }
