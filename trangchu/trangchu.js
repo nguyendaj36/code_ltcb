@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Khoi tao modal windows va cac nut dieu khien
   const modals = {
     product1: document.getElementById("productModal1"),
     product2: document.getElementById("productModal2"),
@@ -19,27 +18,22 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const closeButtons = document.querySelectorAll(".close-button");
-  const addToCartButtons = document.querySelectorAll(".add-to-cart-button");
+  const addToCartButtons = document.querySelectorAll(".nut-them-vao-gio");
 
-  // Thiet lap su kien cho cac nut "Xem them"
   Object.keys(viewButtons).forEach((key, index) => {
     const modalId = `productModal${index + 1}`;
     viewButtons[key].addEventListener("click", () => {
       document.getElementById(modalId).style.display = "block";
-
-      // Khoi tao slider cho modal vua mo
       initImageSlider(modalId);
     });
   });
 
-  // Thiet lap su kien cho cac nut dong modal
   closeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       button.closest(".modal").style.display = "none";
     });
   });
 
-  // Dong modal khi nhap vao ben ngoai
   window.addEventListener("click", (event) => {
     Object.values(modals).forEach((modal) => {
       if (event.target === modal) {
@@ -48,27 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Thiet lap su kien cho cac nut "Them vao gio hang"
   addToCartButtons.forEach((button) => {
     button.addEventListener("click", () => {
       alert("San pham da duoc them vao gio hang!");
-      // Them logic cap nhat gio hang o day neu can
     });
   });
-
-  // Khoi tao tat ca cac slider anh khi trang tai xong
-  // (Dieu nay khong can thiet vi chung ta khoi tao slider khi mo modal)
-  // initAllImageSliders();
 });
 
-// Ham khoi tao slider anh cho mot modal cu the
 function initImageSlider(modalId) {
   const modal = document.getElementById(modalId);
-  const images = modal.querySelectorAll(".slider-image");
-  const prevButton = modal.querySelector(".prev-button");
-  const nextButton = modal.querySelector(".next-button");
+  const images = modal.querySelectorAll(".hinh-anh-trinh-chieu");
+  const prevButton = modal.querySelector(".nut-truoc");
+  const nextButton = modal.querySelector(".nut-sau");
 
-  // Dat anh dau tien la active neu chua co anh nao active
   let currentIndex = 0;
   let foundActive = false;
 
@@ -83,14 +69,12 @@ function initImageSlider(modalId) {
     images[0].classList.add("active");
   }
 
-  // Ham hien thi anh theo index
   const showImage = (index) => {
     images.forEach((img, i) => {
       img.classList.toggle("active", i === index);
     });
   };
 
-  // Thiet lap event listeners cho cac nut dieu huong
   if (prevButton && nextButton) {
     prevButton.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -104,7 +88,6 @@ function initImageSlider(modalId) {
   }
 }
 
-// Ham khoi tao tat ca slider anh (khong dung den vi chi khoi tao khi can)
 function initAllImageSliders() {
   for (let i = 1; i <= 6; i++) {
     initImageSlider(`productModal${i}`);
