@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} /*Thiet lap mac dinh cac gia tri*/
+
+body{
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+/*container chua toan bo noi dung*/
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*card chua form thanh toan*/
+.card{
+    background: white;
+    border-radius: 10px; /* bo goc tron cho card*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* bo nho cho card*/
+    padding: 30px;
+}
+
+h1{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.form-group{
+    margin-bottom: 15px; /* khoang cach giua cac phan tu trong form*/
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+/*style cho input va select*/
+input, select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* bo goc tron cho input va select*/
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus{
+    border-color: #3498db; /*doi mau vien */
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* bo nho cho input va select khi focus*/
+}
+.row{
+    display: flex;
+    gap: 15px; /* khoang cach giua cac phan tu trong row*/
+}
+.row .form-group{
+    flex: 1; /* chiem toan bo chieu rong cua row*/
+}
+
+.btn{
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px; /* bo goc tron cho nut*/
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.btn:hover{
+    background: #2980b9;
+}
+
+.payment-method{
+    margin: 30px 0;
+}
+
+.payment-option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* khoang cach giua cac phan tu trong payment-option*/
+    padding 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.payment-option:hover{
+    border-color: #3498db;
+}
+
+.payment-option input{
+    width: auto;
+    margin-right: 15px;
+}
+.payment-icon{
+    width: 40px;
+    margin-right: 15px;
+}
+
+.payment-form{
+    display: none; /* an form thanh toan mac dinh*/
+    animation: fadeIn 0.3s ease-in-out; /* hieu ung fade in khi hien form*/
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.payment-form.active{
+    display: block;
+}
+
+.card-icons{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-icon{
+    width: 40px;
+    height: 25px;
+    object-fit: contain; /* giu tỉ lệ khung hình cho icon*/
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 2px;
+    background: white;
+}
+
+.bank-transfer-info{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px; /* khoang cach giua cac phan tu trong bank-transfer-info*/;
+}
+
+.bank-info-row{
+    display: flex;
+    margin-bottom: 10px; /* khoang cach giua cac phan tu trong bank-info-row*/
+}
+
+.bank-info-label{
+    font-weight: 600;
+    min-width: 150px; /* chieu rong mac dinh cho label*/
+    color: #2c3e50;
+}
+
+.bank-info-value{
+    flex: 1;
+}
+
+.qr-code-container{
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.qr-code{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #ccc;;
+}
+
+.qr-code img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.note{
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0; /* bat dau tu 0%*/
+        transform: translateY(10px); /* di chuyen tu duoi len*/
+    }
+    to{
+        opacity: 1; /* ket thuc tu 100%*/
+        transform: translateY(0); /* ve vi tri ban dau*/
+    }
+}
+
+.tong-tien-inline {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.tong-tien-inline h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.thongtin-tongtien {
+    font-size: 15px;
+}
+
+.tomtat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tomtat-row.total {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.soluong {
+    color: #333;
+}
+
+.giamgia {
+    color: #e74c3c;
+}
+
+.total-soluong {
+    color: #3498db;
+    font-size: 18px;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <link rel="stylesheet" href="thanhtoan.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Thông tin thanh toán</h1>
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name" required placeholder="Nguyễn Văn A">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="example@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="tel" id="phone" required placeholder="0987 654 321">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Địa chỉ</label>
+                    <input type="text" id="address" required placeholder="Số nhà, đường, phường/xã, quận/huyện">
+                </div>
+                
+                <div class="tong-tien-inline">
+                    <h2>Tổng tiền thanh toán</h2>
+                    <div class="thongtin-tongtien">
+                        <div class="tomtat-row">
+                            <span>Tạm tính:</span>
+                            <span class="soluong">0₫</span>
+                        </div>
+                        <div class="tomtat-row">
+                            <span>Phí vận chuyển:</span>
+                            <span class="soluong">0₫</span>
+                        </div>
+                        <div class="tomtat-row">
+                            <span>Giảm giá:</span>
+                            <span class="soluong giamgia">-0₫</span>
+                        </div>
+                        <div class="tomtat-row total">
+                            <span>Tổng cộng:</span>
+                            <span class="amount total-soluong">0₫</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h1>Phương thức thanh toán</h1>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="credit-card" checked>
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-visa-credit-card-icon-download-in-svg-png-gif-file-formats--e-commerce-pack-shopping-icons-1547549.png?f=webp&w=256" alt="Credit Card" class="payment-icon">
+                        Thẻ tín dụng/Ghi nợ
+                    </label>
+                    
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="bank-transfer">
+                        <img src="https://png.pngtree.com/png-vector/20220821/ourmid/pngtree-bank-transfer-icon-house-selected-transfer-vector-png-image_19626578.png" alt="Bank Transfer" class="payment-icon">
+                        Chuyển khoản ngân hàng
+                    </label>
+                    
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="paypal">
+                        <img src="https://www.citypng.com/public/uploads/preview/hd-paypal-logo-transparent-background-701751694777793hs5bxpddux.png" alt="PayPal" class="payment-icon">
+                        PayPal
+                    </label>
+                    
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="momo">
+                        <img src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM0E3SHc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3873048b5c25240e612222d38b001c927993024c/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--15c3f2f3e11927673ae52b71712c1f66a7a1b7bd/MoMo%20Logo.png" alt="Momo" class="payment-icon">
+                        Ví điện tử Momo
+                    </label>
+                    
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="COD">
+                        <img src="https://cdn-icons-png.freepik.com/256/1981/1981845.png?semt=ais_hybrid" alt="COD" class="payment-icon">
+                        Thanh toán khi nhận hàng (COD)
+                    </label>
+                </div>
+                
+                <!-- Credit Card Form -->
+                <div id="credit-card-form" class="payment-form active">
+                    <div class="form-group">
+                        <label for="card-number">Số thẻ</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                        <div class="card-icons">
+                            <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" class="card-icon" alt="Visa">
+                            <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" class="card-icon" alt="Mastercard">
+                            <img src="https://cdn-icons-png.flaticon.com/512/196/196558.png" class="card-icon" alt="JCB">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="card-expiry">Ngày hết hạn (MM/YY)</label>
+                            <input type="text" id="card-expiry" placeholder="MM/YY">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="card-cvv">Mã CVV</label>
+                            <input type="text" id="card-cvv" placeholder="123">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-name">Tên chủ thẻ</label>
+                        <input type="text" id="card-name" placeholder="NGUYEN VAN A">
+                    </div>
+                </div>
+                
+                <!-- Bank Transfer Form -->
+                <div id="bank-transfer-form" class="payment-form">
+                    <div class="bank-transfer-info">
+                        <h3 style="margin-bottom: 15px; color: #000000;">Thông tin chuyển khoản</h3>
+                        
+                        <div class="bank-info-row">
+                            <div class="bank-info-label">Ngân hàng:</div>
+                            <div class="bank-info-value">Ngân hàng TMCP Kỹ Thương Việt Nam (Techcombank)</div>
+                        </div>
+                        
+                        <div class="bank-info-row">
+                            <div class="bank-info-label">Số tài khoản:</div>
+                            <div class="bank-info-value">171020059999</div>
+                        </div>
+                        
+                        <div class="bank-info-row">
+                            <div class="bank-info-label">Tên tài khoản:</div>
+                            <div class="bank-info-value">TRAN QUANG MINH</div>
+                        </div>
+                        
+                        <div class="bank-info-row">
+                            <div class="bank-info-label">Nội dung:</div>
+                            <div class="bank-info-value">Thanh toán đơn hàng #<span id="order-id">12345</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="qr-code-container">
+                        <h3 style="margin-bottom: 15px; color: #000000;">Quét mã QR để thanh toán</h3>
+                        <div class="qr-code">
+                            <img src="image/QR.jpg" alt="QR Code">
+                        </div>
+                        <div class="note">
+                            Mở ứng dụng ngân hàng và quét mã QR để thanh toán nhanh chóng
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bank-transfer-proof">Tải lên ảnh chứng từ chuyển khoản (nếu có)</label>
+                        <input type="file" id="bank-transfer-proof" accept="image/*">
+                    </div>
+                </div>
+                
+                <!-- PayPal Form -->
+                <div id="paypal-form" class="payment-form">
+                    <div class="form-group">
+                        <label for="paypal-email">Email đăng nhập PayPal</label>
+                        <input type="email" id="paypal-email" placeholder="paypal@example.com">
+                    </div>
+                    <p style="text-align: center; margin: 15px 0; color: #000000;">
+                        Bạn sẽ được chuyển hướng đến trang PayPal để hoàn tất thanh toán
+                    </p>
+                </div>
+                
+                <!-- Momo Form -->
+                <div id="momo-form" class="payment-form">
+                    <div class="form-group">
+                        <label for="momo-phone">Số điện thoại Momo</label>
+                        <input type="tel" id="momo-phone" placeholder="0987 654 321">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="momo-name">Tên chủ tài khoản</label>
+                        <input type="text" id="momo-name" placeholder="NGUYEN VAN A">
+                    </div>
+                    
+                    <p style="text-align: center; margin: 15px 0; color: #000000;">
+                        Vui lòng mở ứng dụng Momo để xác nhận thanh toán khi được yêu cầu
+                    </p>
+                </div>
+
+                <div id="cod-form" class="payment-form">
+                    <p style="text-align: center; margin: 15px 0; color: #000000;">
+                        Bạn sẽ thanh toán khi nhận hàng. Vui lòng chuẩn bị tiền mặt hoặc thẻ để thanh toán cho nhân viên giao hàng.
+                    </p>
+                </div>
+                
+                <button type="submit" class="btn">Xác nhận thanh toán</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="thanh-toan.js"></script>
+</body>
+</html>
