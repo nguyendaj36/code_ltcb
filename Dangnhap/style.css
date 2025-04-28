@@ -1,0 +1,115 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif; /* Font nhẹ nhàng, dễ đọc */
+}
+
+.background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('image/dangnhap.jpg') no-repeat center center/cover; /* Ảnh nền phủ toàn bộ */
+    z-index: -1;           /* Đưa background ra sau các phần tử khác */
+    filter: blur(10px);    /* Làm mờ nền */
+}
+
+/* can giua toan bo trang */
+.container {
+    display: flex;
+    flex-direction: column;              /* Xếp dọc */
+    align-items: center;                 /* Căn giữa theo chiều ngang */
+    justify-content: center;            /* Căn giữa theo chiều dọc */
+    height: 100vh;                       /* Chiếm toàn bộ chiều cao trình duyệt */
+}
+
+/*form chinh*/
+.form-box {
+    background: white;                  /* Nền trắng */
+    padding: 30px;
+    border-radius: 10px;                /* Bo góc */
+    width: 320px;
+    transition: all 0.3s ease;          /* Hiệu ứng mượt khi thay đổi */
+}
+
+/*tieu de form*/
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(16, 186, 192);           /* Màu xanh nổi bật */
+}
+
+/* form dang nhap */
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* nut submit */
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background: rgb(3, 202, 202);       /* Màu nền xanh đậm */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* ghi nho luu mat khau */
+.form-box .luu-mat-khau {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 12px;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+/* chuyenform */
+.form-box .chuyen-form {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.form-box .chuyen-form span {
+    color: rgb(15, 98, 223);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* class an form */
+.hidden {
+    display: none;
+}
+
+/* dang nhap bang social network */
+.dang-nhap-khac {
+    text-align: center;
+}
+
+.dang-nhap-khac p {
+    font-size: 14px;
+    margin: 10px 0 5px;
+}
+
+/* fb*/
+.facebook-btn {
+    background-color: rgb(10, 128, 224);
+    color: white;
+    border: none;
+    margin-bottom: 5px;
+}
+
+/* gg */
+.google-btn {
+    background-color: #db4437;
+    color: white;
+    border: none;
+}
